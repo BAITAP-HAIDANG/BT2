@@ -72,3 +72,30 @@ body {
         left: 120%;
     }
 }
+
+.formb {
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+    .wapper {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+    }
+
+    .formb {
+        padding-top: 300px;
+        display: block;
+        font-family: $primary-font;
+        font-weight: 700;
+        color:#fff;
+        z-index: 199;
+        font-size: 23px;
+    }
+}
