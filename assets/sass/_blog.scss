@@ -1,0 +1,143 @@
+.blog {
+    background: url('../images/banner-sec-2.png') no-repeat left top, #191919;
+    padding-bottom: 50px;
+    padding-top: 80px;
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+
+        p {
+            font-size: 42px;
+            font-family: $primary-font;
+            font-weight: 700;
+            color: $secondary-color;
+            position: relative;
+            margin-bottom: 0;
+
+            &:after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 35px;
+                border: 2px solid #fff;
+            }
+        }
+
+        .btn-custom {
+            background-color: transparent;
+            border: 2px solid #fff;
+            font-family: $primary-font;
+            text-align: center;
+            padding: 10px 50px;
+            color: $secondary-color;
+            font-size: 18px;
+            background-color: transparent;
+
+            &::before {
+                background-color: #fff;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-post {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 30px;
+        grid-template-areas:
+            'banner banner banner'
+            'sbanner1 sbanner2 sbanner3';
+
+    }
+
+    &-item:first-child {
+        grid-area: banner;
+    }
+
+    &-item:nth-child(2) {
+        grid-area: sbanner1;
+    }
+
+    &-item:nth-child(3) {
+        grid-area: sbanner2;
+    }
+
+    &-item:nth-child(4) {
+        grid-area: sbanner3;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        font-family: $primary-font;
+        font-weight: 700;
+        background-color: #fff;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        &_span {
+            font-size: 16px;
+            color: $secondary-color;
+            padding-top: 25px;
+            padding-left: 25px;
+        }
+
+        &_title {
+            margin-bottom: 15px;
+            padding-right: 25px;
+
+            a {
+                display: inline-block;
+                font-size: 24px;
+                color: #000;
+                padding-left: 25px;
+                transition: all 0.4s;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        &_content {
+            font-size: 16px;
+            font-family: $secondary-font;
+            font-weight: 300;
+            padding-left: 25px;
+            padding-bottom: 25px;
+            padding-right: 25px;
+        }
+
+        .btn-custom {
+            text-align: center;
+            line-height: 36px;
+            width: 100px;
+            height: 40px;
+            background-color: transparent;
+            border: 2px solid $secondary-color;
+            margin-left: 25px;
+            margin-bottom: 25px;
+
+            &::before {
+                background-color: $secondary-color;
+            }
+
+            &:hover {
+                text-decoration: none;
+                color: $secondary-color;
+            }
+        }
+    }
+
+}

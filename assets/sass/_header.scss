@@ -1,0 +1,120 @@
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-wapper {
+        background-color: $primary-color;
+    }
+
+    &-logo {
+        margin-right: 6px;
+
+        img {
+            width: 250px;
+        }
+    }
+
+    &-nav {
+        height: 60px;
+
+        ul {
+            height: 60px;
+            width: 100%;
+
+            li {
+                height: 60px;
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    opacity: 0;
+                    transform: scale(0, 1);
+                    transform-origin: left center;
+                    border-bottom: 4px solid $secondary-color;
+                    transition: transform 0.3s, opacity 0.3s;
+                }
+
+                &:hover::before {
+                    border-bottom: 4px solid $secondary-color;
+                    opacity: 1;
+                    transform: scale(1, 1);
+                }
+
+            }
+        }
+
+        a {
+            display: block;
+            font-family: $primary-font;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &_links {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+        }
+
+        #header-nav_dd-1 {
+            height: 140px !important;
+        }
+        #header-nav_dd-2 {
+            height: 230px !important;
+        }
+
+        &_dd {
+            // display: none;
+            position: absolute;
+            top: 60px;
+            background-color: #fff;
+            width: 250px !important;
+            transform: translateY(70px);
+            opacity: 0;
+            transition: transform .4s ease;
+            visibility: hidden;
+            z-index: 99;
+
+            li {
+                height: 46px !important;
+            }
+
+            a {
+                color: #000;
+
+            }
+        }
+    }
+
+    &-nav ul li:hover ul {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &-search {
+        margin-right: 70px;
+
+        img {
+            width: 20px;
+        }
+
+    }
+}

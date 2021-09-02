@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixin';
+@import 'reset';
+@import 'font';
+@import 'base';
+@import 'header';
+@import 'menu';
+@import 'blog';
+@import 'store';
+@import 'footer';
+// sass --watch app.scss:app.css
