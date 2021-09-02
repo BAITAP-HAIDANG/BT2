@@ -1,13 +1,117 @@
 .store {
-    height: 500px;
-    background-color: rgb(53, 53, 53);
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-color: #f5f5f5;
 
-    img {
-        width: 250px;
-        object-fit: cover;
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+
+        p {
+            font-size: 42px;
+            font-family: $primary-font;
+            font-weight: 700;
+            color: $secondary-color;
+            position: relative;
+            margin-bottom: 0;
+
+            &:after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 65px;
+                border: 2px solid #000;
+            }
+        }
+    }
+
+    &-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 30px;
+        color: #fff;
+
+        &_left {
+            background-color: $secondary-color;
+            padding-right: 30px;
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .title {
+                font-family: $primary-font;
+                font-size: 24px;
+                font-weight: 700;
+                padding-bottom: 10px;
+
+            }
+        }
+
+        &_right {
+            img {
+                width: 100%;
+                height: 100%;
+                max-height: 357px !important;
+                object-fit: cover;
+            }
+        }
     }
 }
 
-.owl-carousel {
-    display: block;
+#store-slider {
+    position: relative;
+
+    .item {
+
+        img {
+            height: 165px;
+            width: 250px;
+        }
+
+        p {
+            font-family: $primary-font;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            position: absolute;
+            bottom: 0px;
+            left: 15px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.btn-slider_back,
+.btn-slider_pre {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 45px;
+    position: absolute;
+    top: calc(50% - 20px);
+    transition: all 0.6s ease;
+    &:hover {
+        background-color: $secondary-color;
+        ion-icon{
+            color: #fff;
+        }
+    }
+    ion-icon {
+        font-size: 16px;
+    }
+}
+
+.btn-slider_pre {
+    left: -50px;
+}
+
+.btn-slider_back {
+    right: -50px;
 }

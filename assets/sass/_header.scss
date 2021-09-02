@@ -6,6 +6,9 @@
 
     &-wapper {
         background-color: $primary-color;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
     }
 
     &-logo {
@@ -76,6 +79,7 @@
         #header-nav_dd-1 {
             height: 140px !important;
         }
+
         #header-nav_dd-2 {
             height: 230px !important;
         }
